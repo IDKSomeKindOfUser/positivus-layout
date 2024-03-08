@@ -1,14 +1,14 @@
-@import './mixins';
+@import './mixins', './variables';
 
 
 body {
   @include fluid-text(16, 18);
 
-  font-family: var(--font-family-base);
+  font-family: $font-family-base;
   font-weight: 400;
   line-height: 1.28;
-  color: var(--color-dark);
-  background-color: var(--color-white);
+  color: $color-dark;
+  background-color: $color-white;
 }
 
 a,
@@ -16,7 +16,7 @@ button,
 input,
 textarea,
 svg * {
-  transition-duration: var(--transition-duration);
+  transition-duration: $transition-duration;
 }
 
 a {

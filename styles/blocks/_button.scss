@@ -2,22 +2,22 @@
     @include flex-center(true);
 
 
-    height: var(--button-heigth);
+    height: $button-heigth;
     padding-inline: 35px;
     font-size: 20px;
-    color: var(--color-white);
-    background-color: var(--color-dark);
-    border: var(--border);
-    border-radius: var(--border-radius);
+    color: $color-white;
+    background-color: $color-dark;
+    border: $border;
+    border-radius: $border-radius;
 
 
     @include hover{
-        color: var(--color-dark);
-        background-color: var(--color-green);
+        color: $color-dark;
+        background-color: $color-green;
     }
 
     &--transparent{
-        color: var(--color-dark);
+        color: $color-dark;
         background-color: transparent;
     }
 }
