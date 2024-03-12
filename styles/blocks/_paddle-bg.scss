@@ -1,0 +1,9 @@
+.paddle-bg{
+    padding-inline: 7px;
+    background-color: $color-green;
+    border-radius: $border-radius-small;
+
+    &--white{
+        background-color: $color-white;
+    }
+}
