@@ -1,0 +1,118 @@
+.process{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        counter-reset: custom-counter;
+        list-style: none;
+
+        @include mobile{
+            row-gap: 20px;
+        }
+    }
+
+    &__item{
+        --contentCounter: counter(custom-counter);
+
+        counter-increment: custom-counter;
+
+        &:nth-child(-n + 9){
+            --contentCounter: '0' counter(custom-counter);
+        }
+    }
+
+    &__accordion{
+        --indicatorVericalRotate: 90deg;
+
+        padding: 40px 60px;
+        background-color: $color-gray;
+        border: $border;
+        border-radius: $border-radius-large;
+        box-shadow: $border-shadow;
+        transition-duration: $transition-duration;
+
+        @include hover{
+            background-color: $color-green;
+        }
+
+        @include mobile{
+            padding: 30px;
+        }
+
+        &[open]{
+            --indicatorVericalRotate: 0;
+
+            background-color: $color-green;
+        }
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 50px;
+            cursor: pointer;
+            user-select: none;
+
+            @include mobile{
+                column-gap: 28px;
+            }
+        }
+
+        &-title{
+            @include fluid-text(18, 30);
+
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+
+            @include mobile{
+                column-gap: 33px;
+            }
+
+            &::before{
+                content: var(--contentCounter);
+                font-size: 2em;
+
+                @include mobile{
+                    font-size: 30px;
+                }
+            }
+        }
+
+        &-indicator{
+            @include flex-center;
+            @include square(58px);
+
+            flex-shrink: 0;
+            position: relative;
+            background-color: $color-gray;
+            border-radius: 50%;
+            border: $border;
+
+            @include mobile{
+                width: 30px;
+            };
+
+            &::before,
+            &::after{
+                @include abs-center;
+
+
+                content: '';
+                width: 45%;
+                height: 10%;
+                background-color: $color-dark;
+            }
+
+            &::after{
+                rotate: var(--indicatorVericalRotate);
+                transition-duration: $transition-duration;
+            }
+        }
+        &-body{
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: $border;
+        }
+    }
+}
