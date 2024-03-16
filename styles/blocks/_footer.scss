@@ -1,15 +1,16 @@
-.footer{
-    &__inner{
-        padding: 55px 60px 50px;
-        color: $color-white;
-        background-color: $color-dark;
-        border-radius: $border-radius-large $border-radius-large 0 0;
+.footer {
+  &__inner {
+    padding: 55px 60px 50px;
+    color: $color-white;
+    background-color: $color-dark;
+    border-radius: $border-radius-large $border-radius-large 0 0;
 
-    }
-    &__navigation{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 30px;
-    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
 }
