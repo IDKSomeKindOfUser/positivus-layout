@@ -1,10 +1,10 @@
 .field{
-    --fieldInputHeight: $input-heigth;
-    --fieldInputTextColor: $color-dark;
-    --fieldInputBgColor: $color-white;
-    --fieldInputBorderColor: $color-dark;
-    --fieldInputPlaceholderColor: $color-gray-alt;
-    --fieldInputHoverBgColor: $color-green;
+    --fieldInputHeight: 59px;
+    --fieldInputTextColor: #191A23;
+    --fieldInputBgColor: #ffffff;
+    --fieldInputBorderColor: #191A23;
+    --fieldInputPlaceholderColor: #898989;
+    --fieldInputHoverBgColor: #B9FF66;
 
 
 
@@ -18,15 +18,15 @@
     }
 
     &--big-height{
-        --fieldInputHeight: $button-heigth;
+        --fieldInputHeight: 68px;
     }
 
     &--dark-bg{
-        --fieldInputTextColor: $color-white;
-        --fieldInputBgColor: $color-dark;
-        --fieldInputBorderColor: $color-white;
-        --fieldInputPlaceholderColor: $color-white;
-        --fieldInputHoverBgColor: $color-dark;
+        --fieldInputTextColor: #ffffff;
+        --fieldInputBgColor: #191A23;
+        --fieldInputBorderColor: #ffffff;
+        --fieldInputPlaceholderColor: #ffffff;
+        --fieldInputHoverBgColor: #191A23;
         
     }
 
