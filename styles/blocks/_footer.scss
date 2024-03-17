@@ -1,15 +1,151 @@
 .footer{
+    @include mobile{
+        padding-inline: 0;
+    }
+
     &__inner{
         padding: 55px 60px 50px;
         color: $color-white;
         background-color: $color-dark;
-        border-radius: $border-radius-large $border-radius-large 0 0;
 
+
+        @include mobile-above{
+            border-radius: $border-radius-large $border-radius-large 0 0;
+        }
+
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 37px;
+            padding: 50px $container-padding-x 30px;
+        }
     }
     &__navigation{
         display: flex;
         justify-content: space-between;
         align-items: center;
         column-gap: 30px;
+
+        &:not(:last-child){
+            margin-bottom: 66px;
+        }
+
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 37px;
+        }
+
+        @include mobile{
+            display: contents;
+            align-items: center;
+        }
+    }
+
+    &__menu{
+        &__list{
+            display: flex;
+            align-items: center;
+            column-gap: 40px;
+
+            @include mobile{
+                flex-direction: column;
+                row-gap: 15px;
+            }
+        }
+
+        &__link{
+            display: inline-flex;
+            align-items: center;
+            height: 30px;
+            text-decoration: underline;
+
+            @include hover{
+                color: $color-green;
+            }
+        }
+    }
+
+    &__soc1als{
+        order: 1;
+    }
+
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 50px;
+
+        @include mobile-above{
+            &:not(:last-child){
+                padding-bottom: 50px;
+                margin-bottom: 50px;
+                border-bottom: 1px solid currentColor;
+            }
+        }
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            row-gap: inherit;
+        }
+
+        @include mobile-s{
+            width: 100px;
+        }
+    }
+
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 27px;
+    
+
+        &-title{
+            color: $color-dark;
+        }
+
+        &-body{
+            font-style: normal;
+
+            p{
+                --paragraphMarginBottom: 20px;
+            }
+
+            a{
+                @include hover{
+                    color: $color-green;
+                }
+            }
+        }
+
+        @include mobile{
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__extra{
+        display: flex;
+        column-gap: 30px;
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+            order: 2;
+            width: 100%;
+            padding-top: 37px;
+            border-top: 1px solid currentColor;
+        }
+    }
+
+    &__privacy-policy-link{
+        text-decoration: underline;
+
+        @include hover{
+            color: $color-green;
+        }
     }
 }

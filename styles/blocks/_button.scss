@@ -20,4 +20,14 @@
         color: $color-dark;
         background-color: transparent;
     }
+
+    &-green{
+        color: $color-dark;
+        background-color: $color-green;
+
+        @include hover{
+            color: $color-green;
+            background-color: $color-dark;
+        }
+    }
 }
